@@ -1,0 +1,19 @@
+Runtime PII redaction verification
+Records checked: 23
+Raw PII matches: 0
+Redaction markers: ['[REDACTED_CCCD]', '[REDACTED_CREDIT_CARD]', '[REDACTED_EMAIL]', '[REDACTED_PHONE_VN]']
+{
+  "service": "api",
+  "payload": {
+    "message_preview": "Test PII: [REDACTED_EMAIL], [REDACTED_PHONE_VN], CCCD [REDACTED_CCCD], card [RED..."
+  },
+  "event": "request_received",
+  "env": "dev",
+  "correlation_id": "req-c0ffee12",
+  "feature": "qa",
+  "session_id": "cp1-evidence",
+  "model": "claude-sonnet-4-5",
+  "user_id_hash": "644c410b5059",
+  "level": "info",
+  "ts": "2026-09-29T09:44:30.514469Z"
+}

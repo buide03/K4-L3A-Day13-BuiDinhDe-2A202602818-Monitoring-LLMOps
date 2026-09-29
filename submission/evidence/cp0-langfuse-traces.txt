@@ -1,0 +1,4 @@
+Langfuse Observations API v2 verification
+Observations: 10
+Unique trace IDs: 10
+Root observations: 10

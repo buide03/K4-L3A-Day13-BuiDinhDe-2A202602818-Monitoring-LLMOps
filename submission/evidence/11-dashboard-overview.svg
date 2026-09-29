@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900">
+<rect width="100%" height="100%" fill="#08111f"/>
+<style>text{font-family:Arial,sans-serif}.title{font-size:28px;font-weight:700;fill:#f8fafc}.sub{font-size:14px;fill:#94a3b8}.panel{fill:#111d2f;stroke:#26364f;stroke-width:2}.pt{font-size:20px;font-weight:700;fill:#e2e8f0}.value{font-size:18px;fill:#67e8f9}.meta{font-size:13px;fill:#94a3b8}.ok{fill:#22c55e}.line{stroke:#334155;stroke-width:1}</style>
+<text x="48" y="52" class="title">K4-L3A Day 13 Monitoring &amp; LLMOps</text>
+<text x="48" y="80" class="sub">Runtime source: data/logs.jsonl · Last 60 minutes · Refresh 30s · 21 records</text>
+<rect x="48" y="112" width="430" height="330" rx="14" class="panel"/>
+<text x="72" y="150" class="pt">Latency percentiles and TTFT</text>
+<text x="72" y="176" class="meta">Unit: ms</text>
+<line x1="72" y1="192" x2="454" y2="192" class="line"/>
+<text x="72" y="232" class="value">P50 151 ms</text>
+<text x="72" y="266" class="value">P95 1148 ms</text>
+<text x="72" y="300" class="value">P99 1148 ms</text>
+<text x="72" y="334" class="value">TTFT P95 50 ms</text>
+<rect x="72" y="382" width="10" height="10" rx="5" class="ok"/>
+<text x="92" y="392" class="meta">SLO line: p95 lte 3000 ms</text>
+<text x="72" y="422" class="meta">Events: response_sent</text>
+<rect x="514" y="112" width="430" height="330" rx="14" class="panel"/>
+<text x="538" y="150" class="pt">Request traffic</text>
+<text x="538" y="176" class="meta">Unit: requests_per_minute</text>
+<line x1="538" y1="192" x2="920" y2="192" class="line"/>
+<text x="538" y="232" class="value">10 requests</text>
+<text x="538" y="266" class="value">Peak 10 requests/min</text>
+<rect x="538" y="382" width="10" height="10" rx="5" class="ok"/>
+<text x="558" y="392" class="meta">SLO line: rate_per_minute gte 1 requests_per_minute</text>
+<text x="538" y="422" class="meta">Events: request_received</text>
+<rect x="980" y="112" width="430" height="330" rx="14" class="panel"/>
+<text x="1004" y="150" class="pt">Error rate and retrieval success</text>
+<text x="1004" y="176" class="meta">Unit: percent</text>
+<line x1="1004" y1="192" x2="1386" y2="192" class="line"/>
+<text x="1004" y="232" class="value">Error rate 0.00%</text>
+<text x="1004" y="266" class="value">Retrieval success 100.0%</text>
+<text x="1004" y="300" class="value">Breakdown {}</text>
+<rect x="1004" y="382" width="10" height="10" rx="5" class="ok"/>
+<text x="1024" y="392" class="meta">SLO line: error_rate_pct lte 2 percent</text>
+<text x="1004" y="422" class="meta">Events: request_received, request_failed</text>
+<rect x="48" y="477" width="430" height="330" rx="14" class="panel"/>
+<text x="72" y="515" class="pt">Cost over time</text>
+<text x="72" y="541" class="meta">Unit: usd</text>
+<line x1="72" y1="557" x2="454" y2="557" class="line"/>
+<text x="72" y="597" class="value">Total $0.020664</text>
+<text x="72" y="631" class="value">Aggregated over selected window</text>
+<rect x="72" y="747" width="10" height="10" rx="5" class="ok"/>
+<text x="92" y="757" class="meta">SLO line: total lte 2.5 usd</text>
+<text x="72" y="787" class="meta">Events: response_sent</text>
+<rect x="514" y="477" width="430" height="330" rx="14" class="panel"/>
+<text x="538" y="515" class="pt">Input and output tokens</text>
+<text x="538" y="541" class="meta">Unit: tokens</text>
+<line x1="538" y1="557" x2="920" y2="557" class="line"/>
+<text x="538" y="597" class="value">Input 338</text>
+<text x="538" y="631" class="value">Output 1,310</text>
+<text x="538" y="665" class="value">Total 1,648</text>
+<rect x="538" y="747" width="10" height="10" rx="5" class="ok"/>
+<text x="558" y="757" class="meta">SLO line: sum_by_field lte 50000 tokens</text>
+<text x="538" y="787" class="meta">Events: response_sent</text>
+<rect x="980" y="477" width="430" height="330" rx="14" class="panel"/>
+<text x="1004" y="515" class="pt">Quality proxy</text>
+<text x="1004" y="541" class="meta">Unit: score_0_to_1</text>
+<line x1="1004" y1="557" x2="1386" y2="557" class="line"/>
+<text x="1004" y="597" class="value">Average 0.880</text>
+<text x="1004" y="631" class="value">Heuristic score (0–1)</text>
+<rect x="1004" y="747" width="10" height="10" rx="5" class="ok"/>
+<text x="1024" y="757" class="meta">SLO line: mean gte 0.75 score_0_to_1</text>
+<text x="1004" y="787" class="meta">Events: response_sent</text>
+</svg>

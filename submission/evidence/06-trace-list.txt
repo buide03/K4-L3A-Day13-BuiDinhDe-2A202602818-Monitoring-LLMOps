@@ -1,0 +1,35 @@
+CP2 Langfuse trace verification
+Log correlation IDs: 10
+Valid root/retrieval/generation traces: 10
+Raw PII matches in observation I/O: 0
+- req-03669190 -> 69ca4d8466e1245d3c0e2c7a062bdaad
+- req-139abd08 -> ef5e89ba85b905443771f92192f1fc24
+- req-38d6a6ed -> 3c90409cc17fee7725a2de3d273033ec
+- req-61428424 -> 78d34d36bd63f99329ecd8ad0607465c
+- req-7f40f319 -> b3b027af47fc03edccb80a74c83fa3f3
+- req-985bd610 -> 02ceb21e7d5768f16fcac71cb8303146
+- req-bd56e9a1 -> fc94fcc65aca8cc993992b0b6b55a765
+- req-cceb827f -> e0042c025d55ed55f23fc6a1c9b57d0a
+- req-d915dbc5 -> b94f22171082d914ac59c58d4202aca2
+- req-f29e5e6a -> 7b34e18d1826c8b5b28174cbf76f2cb1
+
+Selected trace metadata
+trace_id: 69ca4d8466e1245d3c0e2c7a062bdaad
+user_id_hash: 4d14d5d4f719
+session_id: s09
+environment: dev
+correlation_id: req-03669190
+feature: qa
+model: claude-sonnet-4-5
+prompt_name: day13-chat
+prompt_label: production
+prompt_version: 1
+prompt_source: langfuse
+generation_model: claude-sonnet-4-5
+generation_usage: {'input': 36, 'output': 110, 'total': 146}
+generation_cost: {'total': 0.001758}
+
+Waterfall
+- lab-agent-run [AGENT] id=72df1889f9b389f1 parent=root latency_s=0.151
+- retrieval [RETRIEVER] id=54d45670512c0047 parent=72df1889f9b389f1 latency_s=0.0
+- generation [GENERATION] id=17df900da3b1be57 parent=72df1889f9b389f1 latency_s=0.15

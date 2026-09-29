@@ -7,7 +7,14 @@ primary_slo:
     total_event: 'event == "request_received"'
   target_percent: 99.5
   error_budget_percent: 0.5
-  note: Học viên phải giải thích hoặc điều chỉnh ngưỡng bằng baseline của mình.
+  error_budget:
+    allowed_bad_events_per_1000: 5
+    allowed_unavailable_minutes: 201.6
+    calculation: 28d * 24h * 60m * 0.5% = 201.6 minutes
+  rationale: >-
+    Baseline P95 is below 3000 ms, so this threshold protects tail latency while
+    allowing normal fake-LLM variance. A response_sent event within 3000 ms is
+    good; errors and slower requests consume the 0.5% budget.
 guardrails:
   error_rate_pct_max: 2
   daily_cost_usd_max: 2.5

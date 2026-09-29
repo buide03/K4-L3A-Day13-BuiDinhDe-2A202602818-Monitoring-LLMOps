@@ -1,0 +1,12 @@
+CP3 incident trace evidence
+correlation_id: req-a1eeed22
+trace_id: 7a6817388098ee1b40ff3b9cc25bb85e
+root_prompt: day13-chat production 1 langfuse
+observations:
+- lab-agent-run [AGENT] duration_s=3.674 level=DEFAULT status=OK parent=root
+- retrieval [RETRIEVER] duration_s=2.501 level=DEFAULT status=OK parent=1f955a8f1bd26c69
+- generation [GENERATION] duration_s=0.151 level=DEFAULT status=OK parent=1f955a8f1bd26c69
+generation_model: claude-sonnet-4-5
+generation_usage: {'input': 35, 'output': 103, 'total': 138}
+generation_cost: {'total': 0.00165}
+diagnosis: retrieval duration dominates generation duration

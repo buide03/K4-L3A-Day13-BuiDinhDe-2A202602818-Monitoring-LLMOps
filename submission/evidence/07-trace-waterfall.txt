@@ -1,0 +1,4 @@
+Waterfall
+- lab-agent-run [AGENT] id=72df1889f9b389f1 parent=root latency_s=0.151
+- retrieval [RETRIEVER] id=54d45670512c0047 parent=72df1889f9b389f1 latency_s=0.0
+- generation [GENERATION] id=17df900da3b1be57 parent=72df1889f9b389f1 latency_s=0.15

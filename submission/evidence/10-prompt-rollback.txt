@@ -1,0 +1,6 @@
+PROMOTED production -> v2
+v1 labels ['baseline']
+v2 labels ['candidate', 'production', 'latest']
+ROLLBACK production -> v1
+v1 labels ['baseline', 'production']
+v2 labels ['candidate', 'latest']

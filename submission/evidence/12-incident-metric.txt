@@ -1,0 +1,13 @@
+CP3 incident metric evidence
+challenge_id: day13-k4-l3a-monitoring-llmops-v1
+panel: Latency percentiles and TTFT
+window_start: 2026-09-29T10:42:21.711111Z
+window_end: 2026-09-29T10:42:36.587631Z
+latency_p50_ms: 2651.0
+latency_p95_ms: 3673.0
+latency_p99_ms: 3673.0
+ttft_p95_ms: 50.0
+slo_threshold_ms: 3000
+slo_status: BREACH
+error_breakdown: {}
+quality_avg: 0.84

@@ -1,0 +1,4 @@
+Prompt trace comparison
+req-ba5e1a01 trace_id=d8a0293383ead8edb4b3205bb5ee8a77 name=day13-chat label=baseline version=1 source=langfuse
+req-ca2d1da2 trace_id=99865eacc7a55a1731ca11fd7b7a46f4 name=day13-chat label=candidate version=2 source=langfuse
+req-f00d0002 trace_id=919aae3ebeed95ca11289af3d4e45d4a name=day13-chat label=production version=2 source=langfuse
